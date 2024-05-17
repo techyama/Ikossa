@@ -1,0 +1,141 @@
+.loginbutton {
+  background-color: #3399CC;
+  size            : 400px;
+  color           : white;
+  margin-left     : 40%;
+}
+
+.loginbutton:hover {
+  background-color: #1674a0;
+}
+
+.radio {
+  display: none;
+}
+
+label {
+  cursor      : pointer;
+  padding-left: 70px;
+  position    : relative;
+}
+
+label::before,
+label::after {
+  content      : "";
+  display      : block;
+  border-radius: 50%;
+  position     : absolute;
+  transform    : translateY(-50%);
+  top          : 50%;
+  margin-bottom: 30px;
+  margin-top   : 10px;
+}
+
+label::before {
+  background-color: #fff;
+  border          : 1px solid #3399CC;
+  height          : 35px;
+  width           : 35px;
+  left            : 6px;
+}
+
+label::after {
+  background-color: #1674a0;
+  opacity         : 0;
+  height          : 30px;
+  width           : 30px;
+  left            : 9px;
+}
+
+input:checked+label::after {
+  opacity: 1;
+}
+
+.visually-hidden {
+  position   : absolute;
+  white-space: nowrap;
+  border     : 0;
+  clip       : rect(0 0 0 0);
+  clip-path  : inset(50%);
+  overflow   : hidden;
+  height     : 1px;
+  width      : 1px;
+  margin     : -1px;
+  padding    : 0;
+}
+
+.visually-hidden-home {
+  display    : none;
+  position   : absolute;
+  display:inline-block;
+  white-space: normal;
+  border     : 0;
+  clip       : rect(0 0 0 0);
+  clip-path  : inset(50%);
+  overflow   : hidden;
+  height     : -1px;
+  width      : 1px;
+  margin     : -1px;
+  padding    : 0;
+}
+
+.cp_ipradio {
+  width     : 90%;
+  margin    : 1em auto;
+  text-align: left;
+}
+
+.cp_ipradio ul {
+  margin    : auto;
+  padding   : 10px 5px;
+  list-style: none;
+}
+
+.cp_ipradio .list_item {
+  margin : 5px 10px 5px 10px;
+  padding: 0;
+}
+
+.cp_ipradio label {
+  line-height: 135%;
+  position   : relative;
+  margin     : 0.5rem;
+  cursor     : pointer;
+}
+
+.cp_ipradio .option-input {
+  position: relative;
+  margin  : 0rem 3.5rem 2rem 0;
+  cursor  : pointer;
+}
+
+.cp_ipradio .option-input:before,
+.cp_ipradio .option-input:after {
+  position          : absolute;
+  z-index           : 1;
+  top               : -0.73rem;
+  left              : 1.125rem;
+  width             : 3rem;
+  height            : 3rem;
+  content           : '';
+  -webkit-transition: all 0.3s ease-in-out;
+  transition        : all 0.3s ease-in-out;
+  border-radius     : 50%;
+  background        : #ffffff;
+}
+
+.cp_ipradio .option-input:after {
+  z-index   : 0;
+  top       : -0.855rem;
+  left      : 1rem;
+  width     : 3.25rem;
+  height    : 3.25rem;
+  background: #3399cc;
+}
+
+.cp_ipradio .option-input:checked:before {
+  -webkit-transform: scale(0, 0);
+  transform        : scale(0, 0);
+  border-width     : 0.625rem;
+  border-color     : #3399cc;
+}
